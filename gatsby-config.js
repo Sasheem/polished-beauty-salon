@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Polished Beauty Salon`,
+    description: `Static website for a nail tech Alina. Showcasing her services, client quotes and hours of operation.`,
+    author: `@SasheemDev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,5 +32,12 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "polished-beauty-salon-static-website",
+      },
+    },
+    `gatsby-plugin-styled-components`
   ],
 }
