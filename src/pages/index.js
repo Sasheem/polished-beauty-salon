@@ -3,8 +3,11 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from 'styled-components'
 
+// local components
+import { Heading1, SubHeading } from '../components/common'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Services from '../components/services'
 
 // styled components
 const HeadingStyled = styled.h1``
@@ -24,16 +27,17 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <Section>
-      <HeadingStyled>
+      <Heading1>
         Hi my name is Alina {' '}
         <span role='img' aria-label='Manicure emoji'>
           💅
         </span>
-      </HeadingStyled>
-      <HeadingAccent>
+      </Heading1>
+      <SubHeading>
         Nailtech located in Coral Springs, FL.{' '}
-      </HeadingAccent>
+      </SubHeading>
     </Section>
+    <Services />
   </Layout>
 )
 
