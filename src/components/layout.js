@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 import Navbar from './navbar'
-import Header from "./header"
 import { GlobalStyle } from '../theme/globalStyles'
 
 // styled components
@@ -50,7 +49,6 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       <Navbar />
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} />  */}
       <Container>
         <Main>{children}</Main>
         <Footer>
