@@ -6,6 +6,7 @@ import Seo from "../components/seo"
 import Banner from '../components/banner'
 import Services from '../components/services'
 import IndexGallery from '../components/indexGallery'
+import IndexContact from '../components/indexContact'
 
 // markup
 const IndexPage = () => {
@@ -15,6 +16,7 @@ const IndexPage = () => {
       <Banner />
       <Services />
       <IndexGallery />
+      <IndexContact />
     </Layout>
   )
 }
