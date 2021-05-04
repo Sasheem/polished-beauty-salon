@@ -1,29 +1,8 @@
 import * as React from 'react'
-import styled from 'styled-components'
 
 // local components
-import { Heading2 } from './common'
+import { Container, SubContainer, Heading2 } from './common'
 import ServiceCard from './serviceCard'
-
-// styled components
-const Container = styled.article``
-const SubContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 3em;
-
-    // active when browser window is larger than 480px
-    // target tablets
-	@media only screen and (min-width: 480px) {
-		grid-template-columns: 1fr 1fr;
-	}
-
-    // active when browser window is larger than 768px
-    // target desktops
-    @media only screen and (min-width: 768px) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-`
 
 // data 
 const services = [

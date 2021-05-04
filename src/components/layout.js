@@ -14,12 +14,12 @@ import Navbar from './navbar'
 import { GlobalStyle } from '../theme/globalStyles'
 
 // styled components
-const Container = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
+const Container = styled.div``
+const Main = styled.main`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2.5em;
 `
-const Main = styled.main``
 const Footer = styled.footer`
 	margin-top: 40vh;
 	padding-bottom: 10vh;

@@ -1,5 +1,27 @@
 import styled from 'styled-components'
 
+export const Container = styled.article`
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 1.0875rem 1.45rem;
+`
+export const SubContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3em;
+
+    // active when browser window is larger than 480px
+    // target tablets
+	@media only screen and (min-width: 480px) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+    // active when browser window is larger than 768px
+    // target desktops
+    @media only screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+`
 export const Button = styled.div`
     padding: 0.2rem;
     display: flex;
