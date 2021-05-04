@@ -19,7 +19,7 @@ const Ul = styled.ul`
 	p {
 		text-decoration: none;
 		background-color: none;
-		color: black;
+		color: #44566C;
 	}
 	a:hover,
 	a:active,
@@ -41,7 +41,8 @@ const Ul = styled.ul`
 		width: 300px;
 		padding-top: 3.5rem;
 		transition: transform 0.3s ease-in-out;
-
+		z-index: 1;
+		
 		p, a {
 			color: #a0aec0;
 		}
