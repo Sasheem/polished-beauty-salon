@@ -1,11 +1,11 @@
 import * as React from 'react'
-import styled from 'styled-components'
 
 // local components
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Banner from '../components/banner'
 import Services from '../components/services'
+import IndexGallery from '../components/indexGallery'
 
 // markup
 const IndexPage = () => {
@@ -14,6 +14,7 @@ const IndexPage = () => {
       <Seo title="Home" />
       <Banner />
       <Services />
+      <IndexGallery />
     </Layout>
   )
 }
