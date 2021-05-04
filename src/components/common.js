@@ -3,7 +3,13 @@ import styled from 'styled-components'
 export const Container = styled.article`
     margin: 0 auto;
     max-width: 960px;
+    width: 100%;
     padding: 0 1.0875rem 1.45rem;
+
+    // when browser screen is smaller than 480px
+    @media only screen and (max-width: 480px) {
+        padding: 0 3em 1.45em;
+    }
 `
 export const SubContainer = styled.div`
     display: grid;
@@ -42,6 +48,13 @@ export const Button = styled.div`
         cursor: pointer;
     }
 `
+export const Input = styled.input`
+    padding: 0.25em;
+`
+export const Textarea = styled.textarea`
+    padding: 0.25em;
+`
+export const Submit = styled.input``
 export const Heading1 = styled.h1`
     color: #44566C;
     font-size: 36px;
