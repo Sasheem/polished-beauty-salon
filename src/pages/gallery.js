@@ -1,5 +1,4 @@
 import * as React from 'react'
-import styled from 'styled-components'
 
 // local components
 import Layout from '../components/layout'

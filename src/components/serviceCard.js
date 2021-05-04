@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 // common styled components
-import { Heading4, Heading4LC, BodyText1, BodyText2LC, BodyText3, BodyText3LC } from './common'
+import { Heading4, Heading4LC, BodyText1, BodyText2LC } from './common'
 
 // styled components
 const Container = styled.article`
