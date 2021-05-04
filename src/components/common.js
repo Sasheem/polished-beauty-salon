@@ -10,6 +10,9 @@ export const SubContainer = styled.div`
     grid-template-columns: 1fr;
     grid-gap: 3em;
 
+    // remove if this gets in the way of other components layout
+    margin-bottom: 2em;
+
     // active when browser window is larger than 480px
     // target tablets
 	@media only screen and (min-width: 480px) {
@@ -23,12 +26,21 @@ export const SubContainer = styled.div`
     }
 `
 export const Button = styled.div`
-    padding: 0.2rem;
-    display: flex;
-    justify-content: center;
+    padding: 0.5rem 1rem;
+    display: inline-block;
     border-radius: 5%;
     color: white;
     background-color: #FF99AC;
+
+    p {
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 `
 export const Heading1 = styled.h1`
     color: #44566C;

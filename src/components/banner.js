@@ -2,7 +2,7 @@ import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
 // local components
-import { Heading1, SubHeading } from '../components/common'
+import { Heading1, SubHeading, Button } from '../components/common'
 
 // markup
 const Banner = () => {
@@ -12,7 +12,7 @@ const Banner = () => {
           style={{
             gridArea: "1/1",
             // You can set a maximum height for the image, if you wish.
-            // maxHeight: 600,
+            maxHeight: 600,
           }}
           layout="fullWidth"
           // objectFit="fill"
@@ -30,7 +30,7 @@ const Banner = () => {
           placeItems: 'start',
           alignContent: 'center',
           display: "grid",
-          margin: '0 auto',
+          margin: '2.5em auto',
           maxWidth: '960px',
           width: '100%',
           padding: '0 1.0875rem 1.45rem'
@@ -44,6 +44,9 @@ const Banner = () => {
             <SubHeading>
               Nailtech located in Coral Springs, FL.{' '}
             </SubHeading>
+            <Button>
+              <p>Appointment</p>
+            </Button>
         </section>
       </div>
     )
