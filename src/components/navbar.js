@@ -11,8 +11,6 @@ const Header = styled.header`
 	margin: 0 auto;
   	max-width: 960px;
   	padding: 0 1.0875rem 1.45rem;
-	// padding-left: 96px;
-	// padding-right: 96px;
 `;
 const Nav = styled.nav`
 	width: 100%;
@@ -20,6 +18,7 @@ const Nav = styled.nav`
 	display: flex;
 	justify-conent: space-between;
 	padding-top: 2em;
+	margin-bottom: 1em;
 `;
 const Logo = styled.div``
 
