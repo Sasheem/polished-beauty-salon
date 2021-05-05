@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 // local components
+import { Section, Heading1, BodyText1 } from '../components/common'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
@@ -8,8 +9,10 @@ import Seo from '../components/seo'
 const Gallery = () => (
     <Layout>
         <Seo title='Salon Gallery' />
-        <h1>Gallery</h1>
-        <p>Gallery images will go here in grid style layout</p>
+        <Section>
+            <Heading1>Gallery</Heading1>
+            <BodyText1>Grid layout of gallery images.</BodyText1>
+        </Section>
     </Layout>
 )
 
