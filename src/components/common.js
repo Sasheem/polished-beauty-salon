@@ -11,6 +11,17 @@ export const Container = styled.article`
         padding: 0 3em 1.45em;
     }
 `
+export const Section = styled.section`
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+    padding: 0 1.0875rem 1.45rem;
+
+    // when browser screen is smaller than 480px
+    @media only screen and (max-width: 480px) {
+        padding: 0 3em 1.45em;
+    }
+`
 export const SubContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
@@ -81,6 +92,9 @@ export const SubHeading = styled.p`
 export const BodyText1 = styled.p`
     color: #44566C;
     font-size: 16px;
+`
+export const BodyTextBold1 = styled(BodyText1)`
+    font-weight: 600;
 `
 export const BodyText2 = styled.p`
     color: #44566C;
