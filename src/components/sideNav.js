@@ -64,9 +64,6 @@ const SideNav = ({ open }) => {
     return (
         <Ul open={open}>
             <li>
-                <NavText><Link to='/'>Home</Link></NavText>
-            </li>
-            <li>
                 <NavText><Link to='/about'>About</Link></NavText>
             </li>
             <li>
