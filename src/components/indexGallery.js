@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { navigate } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 // local components
@@ -15,7 +16,7 @@ const IndexGallery = () => (
             <StaticImage src='../images/nails5.png' alt='Gallery nails photo' />
             <StaticImage src='../images/nails6.png' alt='Gallery nails photo' />
         </SubContainer>
-        <Button>
+        <Button onClick={() => navigate('/gallery')}>
             <p>Full Gallery</p>
         </Button>
     </Container>
