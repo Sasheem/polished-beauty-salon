@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.4.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
