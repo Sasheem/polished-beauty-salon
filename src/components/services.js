@@ -48,7 +48,7 @@ const services = [
 const Services = () => {
     return (
         <Container>
-            <Heading2>Services</Heading2>
+            <Heading2 id='services'>Services</Heading2>
             <SubContainer>
                 {services.map((service) => {
                     return (

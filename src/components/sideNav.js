@@ -68,7 +68,9 @@ const SideNav = ({ open }) => {
                 <NavText><Link to='/about'>About</Link></NavText>
             </li>
             <li>
-                <NavText><Link to='/services'>Services</Link></NavText>
+                <AnchorLink to='/#services'>
+					<NavText>Services</NavText>
+				</AnchorLink>
             </li>
             <li>
                 <NavText><Link to='/gallery'>Gallery</Link></NavText>
