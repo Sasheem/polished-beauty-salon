@@ -17,8 +17,8 @@ export const Section = styled.section`
     width: 100%;
     padding: 0 1.0875rem 1.45rem;
 
-    // when browser screen is smaller than 480px
-    @media only screen and (max-width: 480px) {
+    // when browser screen is smaller than 768px
+    @media only screen and (max-width: 768px) {
         padding: 0 3em 1.45em;
     }
 `
