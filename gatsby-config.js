@@ -38,6 +38,7 @@ module.exports = {
         bucketName: "polished-beauty-salon-static-website",
       },
     },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-anchor-links`,
   ],
 }
