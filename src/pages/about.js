@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 
 // local components
-import { Section, Heading1, BodyText1, BodyTextBold1, Heading4 } from '../components/common'
+import { Section, BodyText1, BodyTextBold1, Heading4 } from '../components/common'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
