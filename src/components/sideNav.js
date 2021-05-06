@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 // styled components
 const Ul = styled.ul`
@@ -73,7 +74,9 @@ const SideNav = ({ open }) => {
                 <NavText><Link to='/gallery'>Gallery</Link></NavText>
             </li>
             <li>
-                <NavText><Link to='/contact'>Contact</Link></NavText>
+				<AnchorLink to='/#contact'>
+					<NavText>Contact</NavText>
+				</AnchorLink>
             </li>
         </Ul>
     );
