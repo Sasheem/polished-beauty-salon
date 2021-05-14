@@ -10,28 +10,34 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
-import Navbar from './navbar'
+// global styles
 import { GlobalStyle } from '../theme/globalStyles'
 
+// local components
+import Navbar from './navbar'
+import Footer from './footer'
+
+
 // styled components
+
 const Container = styled.div``
 const Main = styled.main`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2.5em;
 `
-const Footer = styled.footer`
-	margin-top: 40vh;
-	padding-bottom: 10vh;
-	display: flex;
-  flex-direction: column;
-  align-items: center;
-	justify-content: center;
-  p {
-    margin: 0;
-    padding: 0;
-  }
-`
+// const Footer = styled.footer`
+// 	margin-top: 40vh;
+// 	padding-bottom: 10vh;
+// 	display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// 	justify-content: center;
+//   p {
+//     margin: 0;
+//     padding: 0;
+//   }
+// `
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -51,12 +57,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <Container>
         <Main>{children}</Main>
-        <Footer>
-          <p>Developed by {` `}
-            <a href='https://sasheem.dev'>{data.site.siteMetadata.author}</a>
-          </p>
-          <p>Polished Beauty Salon © {new Date().getFullYear()}</p>          
-        </Footer>
+        <Footer />
       </Container>
     </>
   )
