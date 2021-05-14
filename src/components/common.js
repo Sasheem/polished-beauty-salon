@@ -45,7 +45,7 @@ export const SubContainer = styled.div`
 export const Button = styled.div`
     padding: 0.5rem 1rem;
     display: inline-block;
-    border-radius: 5%;
+    border-radius: 5px;
     color: white;
     background-color: #FF99AC;
 
@@ -65,22 +65,45 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
     padding: 0.25em;
 `
-export const Submit = styled.input``
+export const Submit = styled.input`
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 5px;
+    color: white;
+    background-color: #FF99AC;
+    border-style: none;
+    &:hover {
+        cursor: pointer;
+    }
+`
 export const Heading1 = styled.h1`
     color: #44566C;
     font-size: 36px;
+`
+export const Heading1Light = styled(Heading1)`
+    color: #FAFBFB;
 `
 export const Heading2 = styled.h2`
     color: #44566C;
     font-size: 30px;
 `
+export const Heading2Light = styled(Heading2)`
+    color: #FAFBFB;
+`
 export const Heading3 = styled.h3`
     color: #44566C;
     font-size: 24px;
 `
+export const Heading3Light = styled(Heading3)`
+    color: #FAFBFB;
+`
 export const Heading4 = styled.h4`
     color: #44566C;
     font-size: 20px;
+`
+export const Heading4Light = styled(Heading4)`
+    color: #FAFBFB;
+    // color: #FFFFFF;
 `
 export const Heading4LC = styled(Heading4)`
     color: #8A97A6;
