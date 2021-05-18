@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Polished Beauty Salon`,
-    description: `Static website for a nail tech Alina. Showcasing her services, client quotes and hours of operation.`,
+    description: `Static website for Polished Beauty Salon owned by Alina. Showcases her services, gallery of work, and hours of operation.`,
     author: `@SasheemDev`,
+    facebookUrl: `https://www.facebook.com/Polished-Beauty-Salon-590057777678058/photos/?ref=page_internal`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
