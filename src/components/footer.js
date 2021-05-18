@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components'
 
@@ -70,55 +70,74 @@ const Form = styled.form`
     grid-template-columns: 2fr 1fr;
     grid-gap: 0.25em;
 `
+const IconLink = styled.a`
+    &:hover {
+        cursor: pointer;
+    }
+`
 
 // markup
-const Footer = () => (
-    <Container>
-        <Section>
-            <Content>
-                <Left>
-                    <Heading4Light>Newsletter signup</Heading4Light>
-                    <p>Stay connected! Sign up to receive polished beauty news.</p>
-                    <Form>
-                        <Input type='text' placeholder='email address' name='email' required />
-                        <Submit type='submit' value='Send' />
-                    </Form>
-                    <Heading4Light>Connect with me</Heading4Light>
-                    <Icons>
-                        <FacebookIcon fill='#FFFFFF' />
-                        <InstagramIcon fill='#FFFFFF' />
-                        <LinkedinIcon fill='#FFFFFF' />
-                    </Icons>
-                </Left>
-                <Right>
-                    <div />
-                    <List>
-                        <Heading4Light>Navigation</Heading4Light>
-                        <ul>
-                            <li><AnchorLink to='/#services'>Services</AnchorLink></li>
-                            <li><Link to='/'>Appointment</Link></li>
-                            <li><Link to='/gallery'>Gallery</Link></li>
-                            <li><Link to='/'>Collections</Link></li>
-                            <li><Link to='/'>Contact</Link></li>
-                        </ul>
-                    </List>
-                    <List>
-                        <Heading4Light>Information</Heading4Light>
-                        <ul>
-                            <li><Link to='/about'>About</Link></li>
-                            <li><Link to='/'>FAQs</Link></li>
-                            <li><Link to='/'>Terms & Conditions</Link></li>
-                            <li><Link to='/'>Privacy Policy</Link></li>
-                            <li><Link to='/'>Site Map</Link></li>
-                        </ul>
-                    </List>
-                </Right>
-            </Content>
-            <Copyright>
-                <p>Copyright © {new Date().getFullYear()} Polished Beauty Salon</p>
-            </Copyright>
-        </Section>
-    </Container>
-)
+const Footer = () => {
+    const data = useStaticQuery(graphql`
+        query SiteMetadataQuery {
+            site {
+                siteMetadata {
+                    facebookUrl
+                }
+            }
+        }
+    `)
+
+    return (
+        <Container>
+            <Section>
+                <Content>
+                    <Left>
+                        <Heading4Light>Newsletter signup</Heading4Light>
+                        <p>Stay connected! Sign up to receive polished beauty news.</p>
+                        <Form>
+                            <Input type='text' placeholder='email address' name='email' required />
+                            <Submit type='submit' value='Send' />
+                        </Form>
+                        <Heading4Light>Connect with me</Heading4Light>
+                        <Icons>
+                            <IconLink href={data.site.siteMetadata.facebookUrl} target='_blank'>
+                                <FacebookIcon fill='#FFFFFF' />
+                            </IconLink>
+                            <InstagramIcon fill='#FFFFFF' />
+                            <LinkedinIcon fill='#FFFFFF' />
+                        </Icons>
+                    </Left>
+                    <Right>
+                        <div />
+                        <List>
+                            <Heading4Light>Navigation</Heading4Light>
+                            <ul>
+                                <li><AnchorLink to='/#services'>Services</AnchorLink></li>
+                                <li><Link to='/'>Appointment</Link></li>
+                                <li><Link to='/gallery'>Gallery</Link></li>
+                                <li><Link to='/'>Collections</Link></li>
+                                <li><Link to='/'>Contact</Link></li>
+                            </ul>
+                        </List>
+                        <List>
+                            <Heading4Light>Information</Heading4Light>
+                            <ul>
+                                <li><Link to='/about'>About</Link></li>
+                                <li><Link to='/'>FAQs</Link></li>
+                                <li><Link to='/'>Terms & Conditions</Link></li>
+                                <li><Link to='/'>Privacy Policy</Link></li>
+                                <li><Link to='/'>Site Map</Link></li>
+                            </ul>
+                        </List>
+                    </Right>
+                </Content>
+                <Copyright>
+                    <p>Copyright © {new Date().getFullYear()} Polished Beauty Salon</p>
+                </Copyright>
+            </Section>
+        </Container>
+    )
+}
 
 export default Footer
