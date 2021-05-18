@@ -53,6 +53,7 @@ export const Button = styled.div`
         color: white;
         margin: 0;
         padding: 0;
+        width: 100% !important;
     }
 
     &:hover {
