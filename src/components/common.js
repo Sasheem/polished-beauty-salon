@@ -61,10 +61,10 @@ export const Button = styled.div`
     }
 `
 export const Input = styled.input`
-    padding: 0.25em;
+    padding: 0.25em 0.5em;
 `
 export const Textarea = styled.textarea`
-    padding: 0.25em;
+    padding: 0.25em 0.5em;
 `
 export const Submit = styled.input`
     padding: 0.5rem 1rem;
@@ -108,6 +108,9 @@ export const Heading4Light = styled(Heading4)`
 `
 export const Heading4LC = styled(Heading4)`
     color: #8A97A6;
+`
+export const Heading4Accent = styled(Heading4)`
+    color: #FF99AC;
 `
 export const SubHeading = styled.p`
     color: #44566C;
