@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 // common styled components
-import { Heading4, Heading4LC, BodyText1, BodyText2LC } from './common'
+import { Heading4, Heading4Accent, BodyText1, BodyText2LC } from './common'
 
 // styled components
 const Container = styled.article`
@@ -35,7 +35,7 @@ const ServiceCard = ({ title, price, description, duration }) => (
         <Link to='/appointment'>
             <Header>
                 <Heading4>{title}</Heading4>
-                <Heading4LC>${price}</Heading4LC>
+                <Heading4Accent>${price}</Heading4Accent>
             </Header>
             <BodyText1>{description}</BodyText1>
             <Footer>
