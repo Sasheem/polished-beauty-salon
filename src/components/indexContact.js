@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 // local components
-import { Container, Heading2, SubHeading, Input, Textarea, Submit } from './common'
+import { Container, Heading2, SubHeading } from './common'
 import RowHours from './rowHours'
 import FormContact from './formContact'
 
@@ -77,13 +77,17 @@ const IndexContact = () => (
                 <HorizontalRule />
                 <IconContainer>
                     <IconRow>
-                        <Icon role='img' aria-label='Location emoji'>📍</Icon>
+                        <span role='img' aria-label='Location emoji'>
+                            <Icon role='img' aria-label='Location emoji'>📍</Icon>
+                        </span>
                         <Contact href={info.google} target='_blank'>
                              {info.address}
                         </Contact>
                     </IconRow>
                     <IconRow>
-                        <Icon role='img' aria-label='Phone emoji'>📞</Icon>
+                        <span role='img' aria-label='Location emoji'>
+                            <Icon role='img' aria-label='Phone emoji'>📞</Icon>
+                        </span>
                         <Contact href='tel:+9545493366'>{info.number}</Contact>
                     </IconRow>
                 </IconContainer>
