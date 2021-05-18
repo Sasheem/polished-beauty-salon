@@ -8,7 +8,7 @@ export const Container = styled.article`
 
     // when browser screen is smaller than 480px
     @media only screen and (max-width: 480px) {
-        padding: 0 3em 1.45em;
+        padding: 0 1.5em 1.45em;
     }
 `
 export const Section = styled.section`
@@ -19,7 +19,7 @@ export const Section = styled.section`
 
     // when browser screen is smaller than 768px
     @media only screen and (max-width: 768px) {
-        padding: 0 3em 1.45em;
+        padding: 0 1.5em 1.45em;
     }
 `
 export const SubContainer = styled.div`
