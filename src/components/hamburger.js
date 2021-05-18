@@ -8,7 +8,7 @@ import SideNav from './sideNav';
 const BurgerIcon = styled.div`
 	height: 2em;
 	width: 2em;
-	position: fixed;
+	position: absolute;
 	top: 2em;
 	right: 2em;
 	z-index: 20;
