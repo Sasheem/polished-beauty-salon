@@ -142,6 +142,8 @@ export const BodyText3LC = styled(BodyText3)`
 export const ErrorText = styled.p`
     color: red;
     text-align: center;
+    font-size: 0.9em;
+    padding-top: 0.1em;
 `;
 export const SuccessText = styled.p`
     color: green;
