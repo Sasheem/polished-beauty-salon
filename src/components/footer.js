@@ -2,12 +2,13 @@ import * as React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components'
+import { useForm } from 'react-hook-form'
 
 // local components
 import FacebookIcon from '../assets/facebook2.svg'
 import InstagramIcon from '../assets/instagram.svg'
 import LinkedinIcon from '../assets/linkedin.svg'
-import { Section, Heading4Light, Input, Submit } from './common'
+import { Section, Heading4Light, Input, Submit, ErrorText, SuccessText } from './common'
 
 // styled components
 const Container = styled.footer`
@@ -78,6 +79,7 @@ const IconLink = styled.a`
 
 // markup
 const Footer = () => {
+    // query
     const data = useStaticQuery(graphql`
         query SiteMetadataQuery {
             site {
@@ -87,6 +89,37 @@ const Footer = () => {
             }
         }
     `)
+    
+    // form component
+    const { 
+        register, 
+        handleSubmit,
+        reset,  
+        formState: { 
+            errors, 
+            isSubmitting, 
+            isSubmitted 
+        } 
+    } = useForm()
+
+    // Component: Thank you message
+    const showThankYou = (
+        <SuccessText>Joined mailing list!</SuccessText>
+    );
+
+    // Component: Form
+    const showForm = (
+        <Form onSubmit={handleSubmit((data) => { console.log(data)})}>
+            <Input
+                placeholder='Email'
+                {...register('email', { 
+                    required: 'Email is required', 
+                    pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+                })} 
+            />
+            <Submit type='submit' value='Send' />
+        </Form>
+    )
 
     return (
         <Container>
@@ -95,10 +128,9 @@ const Footer = () => {
                     <Left>
                         <Heading4Light>Newsletter signup</Heading4Light>
                         <p>Stay connected! Sign up to receive polished beauty news.</p>
-                        <Form>
-                            <Input type='text' placeholder='email address' name='email' required />
-                            <Submit type='submit' value='Send' />
-                        </Form>
+                        {isSubmitted && !errors ? showThankYou : showForm}
+                        {errors.email?.type ==='required' && <ErrorText>{errors.email.message}</ErrorText>}
+                        {errors.email?.type === 'pattern' && <ErrorText>Invalid email</ErrorText>}
                         <Heading4Light>Connect with me</Heading4Light>
                         <Icons>
                             <IconLink href={data.site.siteMetadata.facebookUrl} target='_blank'>
