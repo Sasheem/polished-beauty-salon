@@ -21,14 +21,12 @@ const Row = styled.div`
     flex-direction: column;
     align-items: start; 
 `;
-const Label = styled.label``
 
 const FormContact = () => {
     const { 
         register, 
         handleSubmit,
         reset, 
-        setError, 
         formState: { 
             errors, 
             isSubmitting, 
