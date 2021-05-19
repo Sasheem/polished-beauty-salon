@@ -61,9 +61,11 @@ export const Button = styled.div`
     }
 `
 export const Input = styled.input`
+    width: 100%;
     padding: 0.25em 0.5em;
 `
 export const Textarea = styled.textarea`
+    width: 100%;
     padding: 0.25em 0.5em;
 `
 export const Submit = styled.input`
@@ -137,3 +139,11 @@ export const BodyText3 = styled.p`
 export const BodyText3LC = styled(BodyText3)`
     color: #8996A6;
 `
+export const ErrorText = styled.p`
+    color: red;
+    text-align: center;
+`;
+export const SuccessText = styled.p`
+    color: green;
+    text-align: left;
+`;
