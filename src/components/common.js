@@ -140,8 +140,8 @@ export const BodyText3LC = styled(BodyText3)`
     color: #8996A6;
 `
 export const ErrorText = styled.p`
-    color: red;
-    text-align: center;
+    color: red !important;
+    text-align: left;
     font-size: 0.9em;
     padding-top: 0.1em;
 `;
