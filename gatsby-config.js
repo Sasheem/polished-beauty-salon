@@ -6,6 +6,16 @@ module.exports = {
     facebookUrl: `https://www.facebook.com/Polished-Beauty-Salon-590057777678058/photos/?ref=page_internal`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+          `roboto\:300,400,400i,700`
+        ],
+        display: 'swap'
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
